@@ -14,6 +14,11 @@ git config --global user.email $GIT_EMAIL
 echo "Installing brew..."
 echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> $HOME/.bash_profile
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.bash_profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+
 echo "Installing packages..."
 brew bundle install
 
