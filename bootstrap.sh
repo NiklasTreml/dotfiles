@@ -27,12 +27,19 @@ if [ -z ${CI+x} ]; then chsh -s /home/linuxbrew/.linuxbrew/bin/zsh $USER; else e
 
 
 
-echo "Backing up nvim config..."
-echo "Backing up ~/.config/nvim to ~/.config/nvim.bak"
-mv ~/.config/nvim ~/.config/nvim.bak
-echo "Backing up ~/.local/share/nvim to ~/.local/share/nvim.bak "
+if [ -d "~/.config/nvim" ]; then
+    echo "Backing up nvim config..."
+    echo "Backing up ~/.config/nvim to ~/.config/nvim.bak"
+    mv ~/.config/nvim ~/.config/nvim.bak
+    echo "Backing up ~/.local/share/nvim to ~/.local/share/nvim.bak "
+fi
 
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
+if [ -d "~/.local/share/nvim" ]; then
+    mv ~/.local/share/nvim ~/.local/share/nvim.bak
+fi
+
+
+
 echo "Setting up AstroNvim..."
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
