@@ -35,6 +35,7 @@ antigen bundle npm
 antigen bundle nvm 
 antigen bundle rust 
 antigen bundle kubectl 
+antigen bundle sunlei/zsh-ssh
 antigen bundle brew
 antigen bundle reegnz/jq-zsh-plugin
 antigen bundle go/rancher-zsh-completion
