@@ -66,7 +66,6 @@ echo "Updating krew index..."
 kubectl krew update
 kubectl krew install mc
 
-mkdir -p $ANTIGEN_BUNDLES/robbyrussell/oh-my-zsh/cache/completions
 
 zsh -c 'echo "Installing zsh plugins"; exit 0'
 

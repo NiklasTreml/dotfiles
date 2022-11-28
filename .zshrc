@@ -16,6 +16,8 @@ source $(brew --prefix)/share/antigen/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
+mkdir -p $ANTIGEN_BUNDLES/robbyrussell/oh-my-zsh/cache/completions
+
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle pip
