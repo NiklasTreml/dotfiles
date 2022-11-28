@@ -62,7 +62,10 @@ if [ -z ${CI+x} ];
     else echo "Skipping because \$CI is set to $CI";
 fi
 
+zsh -c 'echo "Installing zsh plugins"; exit 0'
+
+
 echo "All done!"
 echo "Please setup your secrets in ~/.env.secrets.example"
 echo "Please run nvim +PackerSync"
-zsh
+echo "Finally log out and back in"

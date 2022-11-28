@@ -14,3 +14,5 @@ jobs:
           GIT_NAME: ci_user
         run: |
           GIT_EMAIL=M@il.com GIT_NAME=ci_user ./bootstrap.sh
+          source ~/.bash_profile
+          which zsh
