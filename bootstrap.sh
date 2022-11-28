@@ -23,7 +23,9 @@ echo "Installing packages..."
 brew bundle install --file=./Brewfile
 
 echo "Changing login shell for $USER"
-chsh -s /home/linuxbrew/.linuxbrew/bin/zsh $USER
+if [ -z ${CI+x} ]; then read -p "Skipping because \$CI is set to $CI" GIT_EMAIL; else chsh -s /home/linuxbrew/.linuxbrew/bin/zsh $USER; fi
+
+
 
 echo "Backing up nvim config..."
 echo "Backing up ~/.config/nvim to ~/.config/nvim.bak"
@@ -34,8 +36,11 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 echo "Setting up AstroNvim..."
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
+cp ./ ~/
+cd ~/
+rm -rf .git .github .gitignore bootstrap.sh README.md Dockerfile Brewfile
 
-
+rm -rf .bootstrap
 # Generate ssh key?
 
 echo "All done!"
