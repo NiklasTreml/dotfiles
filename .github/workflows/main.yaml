@@ -9,5 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run script
+        env:
+          GIT_EMAIL: M@il.com
+          GIT_NAME: ci_user
         run: |
           GIT_EMAIL=M@il.com GIT_NAME=ci_user ./bootstrap.sh
