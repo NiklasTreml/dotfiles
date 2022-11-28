@@ -6,7 +6,7 @@ if [ -z ${GIT_EMAIL+x} ]; then read -p "Enter email (for git): " GIT_EMAIL; else
 if [ -z ${GIT_NAME+x} ]; then read -p "Enter name (for git): " GIT_NAME; else echo "Read GIT_NAME from environment"; fi
 
 
-cd ~
+# cd ~
 
 git config --global user.name $GIT_NAME
 git config --global user.email $GIT_EMAIL
@@ -20,7 +20,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 
 echo "Installing packages..."
-brew bundle install
+brew bundle install --file=./Brewfile
 
 echo "Changing login shell for $USER"
 chsh -s /home/linuxbrew/.linuxbrew/bin/zsh $USER
