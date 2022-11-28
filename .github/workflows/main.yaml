@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 jobs:
-  build:
+  Run bootstrap script:
     runs-on: ubuntu-latest
 
     steps:
