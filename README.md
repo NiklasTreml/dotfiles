@@ -1,5 +1,5 @@
 # Dotfiles
-
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NiklasTreml/dotfiles/CI)
 ## Requirements
 - `git installed`
 ## Usage
