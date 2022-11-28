@@ -11,12 +11,14 @@ LS_COLORS="ow=01;36;40" && export LS_COLORS
 autoload -Uz compinit
 compinit
 
+# fix the kubectl and helm plugin
+mkdir -p $HOME/.antigen/bundles/robbyrussell/oh-my-zsh/cache/completions
+
 source $(brew --prefix)/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
-mkdir -p $ANTIGEN_BUNDLES/robbyrussell/oh-my-zsh/cache/completions
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
