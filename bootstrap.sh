@@ -1,8 +1,10 @@
 # Exit on error
 set -e
 
-read -p "Enter email (for git): " GIT_EMAIL
-read -p "Enter name (for git): " GIT_NAME
+
+if [ -z ${GIT_EMAIL+x} ]; then read -p "Enter email (for git): " GIT_EMAIL; else echo "Read GIT_EMAIL from environment"; fi
+if [ -z ${GIT_NAME+x} ]; then read -p "Enter name (for git): " GIT_NAME; else echo "Read GIT_NAME from environment"; fi
+
 
 cd ~
 

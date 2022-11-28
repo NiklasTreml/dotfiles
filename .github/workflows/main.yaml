@@ -1,0 +1,13 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run script
+        run: |
+          GIT_EMAIL=M@il.com GIT_NAME=ci_user ./bootstrap.sh
