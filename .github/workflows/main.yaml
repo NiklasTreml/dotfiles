@@ -1,6 +1,9 @@
 name: CI
 
-on: [push]
+on: 
+  push:
+    paths-ignore: 
+      - '**/*.md'
 
 jobs:
   Run_bootstrap_script:

@@ -1,7 +1,7 @@
 # Dotfiles
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NiklasTreml/dotfiles/CI)
 ## Requirements
-- `git installed`
+- `git` installed
 ## Usage
 `git clone https://github.com/NiklasTreml/dotfiles.git ~/.bootstrap && cd ~/.bootstrap && ./bootstrap.sh`
 ## Fonts
