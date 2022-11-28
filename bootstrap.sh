@@ -10,7 +10,7 @@ git config --global user.name $GIT_NAME
 git config --global user.email $GIT_EMAIL
 
 echo "Installing brew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "Installing packages..."
 brew bundle install
