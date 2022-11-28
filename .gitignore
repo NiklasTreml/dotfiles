@@ -28,3 +28,6 @@ go
 .config/k9s/config.yml
 .config/helm/repositories.lock
 .config/helm/repositories.yaml
+.config/spotify-tui/.spotify_token_cache.json
+.config/spotify-tui/client.yml
+.config/wslu/
