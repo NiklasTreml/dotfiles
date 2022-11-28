@@ -1,14 +1,11 @@
 # Dotfiles
 
 ## Requirements
-- Brew installed
-    
-    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-
-## Install packages
-`brew bundle install`
-
+- `git installed`
+## Usage
+`git clone https://github.com/NiklasTreml/dotfiles.git ~/.bootstrap && cd ~/.bootstrap && ./bootstrap.sh`
 ## Fonts
+
 ### Meslo Nerd font
 `brew install --cask homebrew/cask-fonts/font-meslo-lg-nerd-font`
 OR [Manually](https://github.com/romkatv/powerlevel10k#manual-font-installation)
