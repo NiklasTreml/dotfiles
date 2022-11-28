@@ -23,7 +23,7 @@ echo "Installing packages..."
 brew bundle install --file=./Brewfile
 
 echo "Changing login shell for $USER"
-if [ -z ${CI+x} ]; then read -p "Skipping because \$CI is set to $CI" GIT_EMAIL; else chsh -s /home/linuxbrew/.linuxbrew/bin/zsh $USER; fi
+if [ -z ${CI+x} ]; then chsh -s /home/linuxbrew/.linuxbrew/bin/zsh $USER; else echo "Skipping because \$CI is set to $CI"; fi
 
 
 
@@ -36,13 +36,26 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 echo "Setting up AstroNvim..."
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
-cp ./ ~/
+cp -r ./ ~/
 cd ~/
 rm -rf .git .github .gitignore bootstrap.sh README.md Dockerfile Brewfile
 
 rm -rf .bootstrap
+
 # Generate ssh key?
+if [ -z ${CI+x} ]; 
+    then while true; do
+        read -p "Do you want to generate an ssh key? [y/n]" yn
+        case $yn in
+            [Yy]* ) ssh-keygen; break;;
+            [Nn]* ) break;;
+            * ) echo "Please answer y or n.";;
+        esac
+    done
+    else echo "Skipping because \$CI is set to $CI";
+fi
 
 echo "All done!"
 echo "Please setup your secrets in ~/.env.secrets.example"
+echo "Please run nvim +PackerSync"
 zsh
