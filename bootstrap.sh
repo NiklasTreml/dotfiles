@@ -64,6 +64,9 @@ fi
 
 zsh -c 'echo "Installing zsh plugins"; exit 0'
 
+echo "Updating krew index..."
+kubectl krew update
+kubectl krew install mc
 
 echo "All done!"
 echo "Please setup your secrets in ~/.env.secrets.example"

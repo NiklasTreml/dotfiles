@@ -36,6 +36,7 @@ antigen bundle reegnz/jq-zsh-plugin
 antigen bundle go/rancher-zsh-completion
 
 source <(kubectl completion zsh)
+source <(kubectl krew completion zsh)
 source <(helm completion zsh)
 
 # Syntax highlighting bundle.

@@ -22,3 +22,6 @@ go
 .lesshst
 .byobu/
 .npm/
+.config/htop/htoprc
+.config/lazygit/
+.krew/
