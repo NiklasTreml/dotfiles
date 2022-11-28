@@ -25,3 +25,6 @@ go
 .config/htop/htoprc
 .config/lazygit/
 .krew/
+.config/k9s/config.yml
+.config/helm/repositories.lock
+.config/helm/repositories.yaml

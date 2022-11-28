@@ -65,6 +65,7 @@ fi
 echo "Updating krew index..."
 kubectl krew update
 kubectl krew install mc
+kubectl krew install tree
 
 
 zsh -c 'echo "Installing zsh plugins"; exit 0'
