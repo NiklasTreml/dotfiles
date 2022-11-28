@@ -1,4 +1,4 @@
-source ./.env
+source ~/.env
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -8,8 +8,10 @@ fi
 
 LS_COLORS="ow=01;36;40" && export LS_COLORS
 
+autoload -Uz compinit
+compinit
 
-source ~/.antigen/antigen.zsh
+source $(brew --prefix)/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
