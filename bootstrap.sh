@@ -45,7 +45,7 @@ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 cp -r ./ ~/
 cd ~/
-rm -rf .git .github .gitignore bootstrap.sh README.md Dockerfile Brewfile
+rm -rf .git .github .gitignore bootstrap.sh README.md Dockerfile .dockerignore Brewfile
 
 rm -rf .bootstrap
 

@@ -19,3 +19,7 @@ jobs:
           GIT_EMAIL=M@il.com GIT_NAME=ci_user ./bootstrap.sh
           source ~/.bash_profile
           which zsh
+      - name: Run zsh 
+      # this launches a noop in zsh which should cause the .zshrc to be loaded and cause antigen to initially install all plugins
+        run: |
+          zsh -c "" 
