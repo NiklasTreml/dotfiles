@@ -71,6 +71,8 @@ kubectl krew install tree
 zsh -c 'echo "Installing zsh plugins"; exit 0'
 
 
+mkdir -p ~/Code
+
 echo "All done!"
 echo "Please setup your secrets in ~/.env.secrets.example"
 echo "Please run nvim +PackerSync"
