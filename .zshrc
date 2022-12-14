@@ -15,7 +15,7 @@ compinit
 mkdir -p $HOME/.antigen/bundles/robbyrussell/oh-my-zsh/cache/completions
 
 source $(brew --prefix)/share/antigen/antigen.zsh
-
+[ -f /home/linuxbrew/.linuxbrew/etc/profile.d/autojump.sh ] && . /home/linuxbrew/.linuxbrew/etc/profile.d/autojump.sh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
